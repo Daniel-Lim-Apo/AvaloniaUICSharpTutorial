@@ -15,6 +15,34 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+<Window.Resources>
+    <SpringEasing x:Key="SpringEasing" Mass="1" Stiffness="2000" Damping="20" InitialVelocity="0" />
+  </Window.Resources>
+  <Window.Styles>
+    <Style Selector="Border.spring">
+      <Style.Animations>
+        <Animation Duration="0:0:0.900"
+                   IterationCount="Infinite"
+                   PlaybackDirection="Normal"
+                   Easing="{DynamicResource SpringEasing}">
+          <KeyFrame Cue="0%" KeySpline="">
+            <Setter Property="TranslateTransform.X" Value="-300"/>
+          </KeyFrame>
+          <KeyFrame Cue="100%">
+            <Setter Property="TranslateTransform.X" Value="0" />
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+  </Window.Styles>
+  <Grid>
+    <Border Classes="spring" Background="Red" Width="50" Height="50">
+      <Border.RenderTransform>
+        <TransformGroup>
+          <TranslateTransform />
+        </TransformGroup>
+      </Border.RenderTransform>
+    </Border>
+  </Grid>
 
 </Window>
