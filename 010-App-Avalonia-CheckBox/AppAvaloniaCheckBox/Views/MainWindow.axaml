@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AppAvaloniaCheckBox.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AppAvaloniaCheckBox.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AppAvaloniaCheckBox">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Orientation="Vertical" Spacing="4">
+    <TextBlock Classes="h2">A check box control</TextBlock>
+
+    <StackPanel Orientation="Horizontal"
+                Margin="0,16,0,0"
+                HorizontalAlignment="Center"
+                Spacing="16">
+      <StackPanel Orientation="Vertical"
+                  Spacing="16">
+        <CheckBox>_Unchecked</CheckBox>
+        <CheckBox IsChecked="True">_Checked</CheckBox>
+        <CheckBox IsChecked="{x:Null}">_Indeterminate</CheckBox>
+        <CheckBox IsChecked="True" IsEnabled="False">Disabled</CheckBox>
+      </StackPanel>
+      <StackPanel Orientation="Vertical"
+                  HorizontalAlignment="Center"
+                  Spacing="16">
+        <CheckBox IsChecked="False" IsThreeState="True">Three State: Unchecked</CheckBox>
+        <CheckBox IsChecked="True" IsThreeState="True">Three State: Checked</CheckBox>
+        <CheckBox IsChecked="{x:Null}" IsThreeState="True">Three State: Indeterminate</CheckBox>
+        <CheckBox IsChecked="{x:Null}" IsThreeState="True" IsEnabled="False">Three State: Disabled</CheckBox>
+      </StackPanel>
+    </StackPanel>
+  </StackPanel>
+
+</Window>

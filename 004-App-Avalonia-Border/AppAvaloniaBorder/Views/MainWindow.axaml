@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AppAvaloniaBorder.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AppAvaloniaBorder.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AppAvaloniaBorder">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Orientation="Vertical" Spacing="4">
+    <TextBlock Classes="h2">A control which decorates a child with a border and background</TextBlock>
+
+    <StackPanel Orientation="Vertical"
+                Margin="0,16,0,0"
+                HorizontalAlignment="Center"
+                Spacing="16">
+      <Border BorderBrush="{DynamicResource SystemAccentColor}" BorderThickness="2" Padding="16">
+        <TextBlock>Border</TextBlock>
+      </Border>
+      <Border Background="{DynamicResource SystemAccentColorDark1}"
+              BorderBrush="{DynamicResource SystemAccentColor}"
+              BorderThickness="4"
+              Padding="16">
+        <TextBlock>Border and Background</TextBlock>
+      </Border>
+      <Border BorderBrush="{DynamicResource SystemAccentColor}"
+              BorderThickness="4"
+              CornerRadius="8"
+              Padding="16">
+        <TextBlock>Rounded Corners</TextBlock>
+      </Border>
+      <Border Background="{DynamicResource SystemAccentColor}"
+              CornerRadius="8"
+              Padding="16">
+        <TextBlock>Rounded Corners</TextBlock>
+      </Border>
+    </StackPanel>
+  </StackPanel>
+
+</Window>
