@@ -13,7 +13,7 @@ public partial class MainWindow : Window
 #if DEBUG
         this.AttachDevTools();
 #endif
-    var button = this.FindControl<Button>("CloseWindowButton");
+    var button = >this.FindControl<Button("CloseWindowButton");
 
     button.Click += Button_Click;
     }

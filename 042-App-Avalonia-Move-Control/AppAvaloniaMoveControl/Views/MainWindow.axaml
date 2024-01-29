@@ -1,13 +1,13 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:AppAvaloniaButtonClick.ViewModels"
+        xmlns:vm="using:AppAvaloniaMoveControl.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AppAvaloniaButtonClick.Views.MainWindow"
+        x:Class="AppAvaloniaMoveControl.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="AppAvaloniaButtonClick">
+        Title="AppAvaloniaMoveControl">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,10 +15,14 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <StackPanel Margin="20">
-        <Button x:Name="Button1" Click="ClickHandlerButton2">Button 1</Button>
-		<Button x:Name="Button2" Click="ClickHandlerButton2" IsEnabled="True">Button 2 - Disable button 1</Button>
-        <TextBlock Margin="0 10" x:Name="message">Ready...</TextBlock>
-    </StackPanel>
+	<Canvas Background="AliceBlue" Margin="10">
+	    <Image Source="avares://AppAvaloniaMoveControl/Assets/bloco.png"
+		       Height="20"
+		       Name="BottomControl"
+			   Canvas.Bottom="60"
+		       />
+	</Canvas>
+	
+	
 
 </Window>

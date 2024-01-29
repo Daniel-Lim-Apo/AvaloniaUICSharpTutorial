@@ -17,7 +17,7 @@
 
       <Grid>
     <StackPanel Orientation="Vertical" Spacing="4">
-    <TextBlock Classes="h2">A button control</TextBlock>
+    <TextBlock Classes="h2">A button control NESTE local</TextBlock>
 
     <StackPanel Orientation="Horizontal"
                 Margin="0,16,0,0"
