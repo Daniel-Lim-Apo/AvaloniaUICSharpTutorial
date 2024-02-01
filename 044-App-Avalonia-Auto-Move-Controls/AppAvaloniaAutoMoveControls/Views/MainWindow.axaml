@@ -1,13 +1,13 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:AppAvaloniaMoveControl.ViewModels"
+        xmlns:vm="using:AppAvaloniaAutoMoveControls.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AppAvaloniaMoveControl.Views.MainWindow"
+        x:Class="AppAvaloniaAutoMoveControls.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="AppAvaloniaMoveControl">
+        Title="AppAvaloniaAutoMoveControls">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,14 +15,11 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<Canvas Background="AliceBlue" Margin="10">
-	    <Image Source="avares://AppAvaloniaMoveControl/Assets/bloco.png"
-		       Height="80"
-		       Name="BottomControl"
-			   Canvas.Bottom="120"
-		       />
+	<Canvas Name="MainCanvas">
+		<TextBlock Name="Control1" Canvas.Left="10" Canvas.Top="10" Text="Control 1"/>
+		<TextBlock Name="Control2" Canvas.Left="10" Canvas.Top="50" Text="Control 2"/>
+		<TextBlock Name="Control3" Canvas.Left="10" Canvas.Top="90" Text="Control 3"/>
+		<TextBlock Name="Control4" Canvas.Left="10" Canvas.Top="130" Text="Control 4"/>
 	</Canvas>
-	
-	
 
 </Window>
