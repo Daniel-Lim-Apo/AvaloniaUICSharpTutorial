@@ -16,10 +16,10 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 	<Grid>
-	<TextBox Text="Control with A W S D and Keyboard arrows"></TextBox>
+	<TextBox Text="Space to send the trigger to top"></TextBox>
 		<Canvas>
-			<Rectangle x:Name="Rectangle1" Fill="Red" Width="100" Height="100" Canvas.Left="{Binding Rectangle1Bounds.X}" Canvas.Top="{Binding Rectangle1Bounds.Y}" />
-			<Rectangle x:Name="Rectangle2" Fill="Blue" Width="100" Height="100" Canvas.Left="{Binding Rectangle2Bounds.X}" Canvas.Top="{Binding Rectangle2Bounds.Y}" />
+			<Rectangle x:Name="Rectangle1" Fill="Blue" Width="100" Height="100" Canvas.Left="{Binding Rectangle1Bounds.X}" Canvas.Top="{Binding Rectangle1Bounds.Y}" />
+			<Rectangle x:Name="Rectangle2" Fill="Red" Width="5" Height="25" Canvas.Left="{Binding Rectangle2Bounds.X}" Canvas.Top="{Binding Rectangle2Bounds.Y}" />
 		</Canvas>
 	</Grid>
 	
