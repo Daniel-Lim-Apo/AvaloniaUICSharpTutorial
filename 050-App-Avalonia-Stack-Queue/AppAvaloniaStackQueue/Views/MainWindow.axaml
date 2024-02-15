@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AppAvaloniaStackQueue.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="200"
+        x:Class="AppAvaloniaStackQueue.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Stacks and Queues Example" >
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+        
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<Button Content="Push to Stack" Click="PushToStack_Click"/>
+			<Button Content="Pop from Stack" Click="PopFromStack_Click"/>
+			<TextBlock x:Name="StackContents" Text="Stack Contents:"/>
+			<Button Content="Enqueue to Queue" Click="EnqueueToQueue_Click"/>
+			<Button Content="Dequeue from Queue" Click="DequeueFromQueue_Click"/>
+			<TextBlock x:Name="QueueContents" Text="Queue Contents:"/>
+		</StackPanel>
+
+
+</Window>
