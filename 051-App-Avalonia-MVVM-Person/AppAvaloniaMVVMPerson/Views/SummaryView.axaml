@@ -1,0 +1,9 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:vm="using:AppAvaloniaMVVMPerson.ViewModels"
+             x:Class="AppAvaloniaMVVMPerson.Views.SummaryView"
+			 x:DataType="vm:SummaryViewModel"
+			 >
+    <TextBlock Text="{Binding Info}" />
+</UserControl>
+
